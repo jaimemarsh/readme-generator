@@ -1,6 +1,6 @@
 // TODO: Include packages needed for this application
-// const inquirer = require('inquirer');
-// const fs = require('fs');
+const inquirer = require('inquirer');
+const fs = require('fs');
 // TODO: Create an array of questions for user input
 
 inquirer.prompt([
@@ -51,10 +51,17 @@ inquirer.prompt([
         name: 'email',
     },
 ])
+console.log(response);
 
 // TODO: Create a function to write README file
-// function writeToFile(fileName, data) { }
-
+.then((response) => {
+    const readmePageContent = generateREADME(response);
+    // response.title, response.location, response.description, response.installation, response.usage, response.contribution, response.tests, response.license, response.github, response.email
+    fs.writeFile('README.md', readmePageContent, (err) => {
+        err ? console.error(err) : console.log("Created README.md")
+    })
+})
+console.log(inquirer)
 // // TODO: Create a function to initialize app
 // function init() { }
 
@@ -69,75 +76,64 @@ inquirer.prompt([
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 //class example
-// const generateHTML = function (name, location, bio, linkedin, github) {
-//     return `<!DOCTYPE html>
-//     <html lang="en">
+const generateHTML = function (name, location, bio, linkedin, github) {
+    return `<!DOCTYPE html>
+    <html lang="en">
     
-//     <head>
-//         <meta charset="UTF-8">
-//         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-//         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-//         <title>Document</title>
-//     </head>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
     
-//     <body>
-//         <header>
-//             <div>
-//                 <h1>Hi! My name is ${name}</h1>
-//                 <p>Bio: ${bio}</p>
-//                 <p>I am from ${location}</p>
-//                 <p>My github username is ${github}</p>
-//                 <p>My linkedin account is ${linkedin}</p>
-//             </div>
-//         </header>
-//     </body>
+    <body>
+        <header>
+            <div>
+                <h1>Hi! My name is ${name}</h1>
+                <p>Bio: ${bio}</p>
+                <p>I am from ${location}</p>
+                <p>My github username is ${github}</p>
+                <p>My linkedin account is ${linkedin}</p>
+            </div>
+        </header>
+    </body>
     
-//     </html>`;
-// }
+    </html>`;
+}
 
 
 
-// const inquirer = require('inquirer');
+    // const inquirer = require('inquirer');
 
-// inquirer.prompt([
-//     {
-//         type: 'name',
-//         message: 'What is your name?',
-//         name: 'name',
-//     },
-//     {
-//         type: 'location',
-//         message: 'What is your location?',
-//         name: 'location',
-//     },
-//     {
-//         type: 'bio',
-//         message: 'Tell us about yourself',
-//         name: 'bio',
-//     },
-//     {
-//         type: 'linkedin',
-//         message: 'What is your linkedin profile?',
-//         name: 'linkedin',
-//     },
-//     {
-//         type: 'github',
-//         message: 'What is your github profile?',
-//         name: 'github',
-//     },
-// ])
+    // inquirer.prompt([
+    //     {
+    //         type: 'name',
+    //         message: 'What is your name?',
+    //         name: 'name',
+    //     },
+    //     {
+    //         type: 'location',
+    //         message: 'What is your location?',
+    //         name: 'location',
+    //     },
+    //     {
+    //         type: 'bio',
+    //         message: 'Tell us about yourself',
+    //         name: 'bio',
+    //     },
+    //     {
+    //         type: 'linkedin',
+    //         message: 'What is your linkedin profile?',
+    //         name: 'linkedin',
+    //     },
+    //     {
+    //         type: 'github',
+    //         message: 'What is your github profile?',
+    //         name: 'github',
+    //     },
+    // ])
 //     .then((response) => {
 //         console.log(response);
 //         const fs = require('fs');
