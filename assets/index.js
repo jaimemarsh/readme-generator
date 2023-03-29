@@ -1,8 +1,7 @@
-// TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
-// TODO: Create an array of questions for user input
 
+//Input to add into a new README file
 function prompts() {
     return inquirer.prompt([
         {
@@ -54,7 +53,7 @@ function prompts() {
     ])
 }
 
-
+//Readme layout
 const generateREADME = function
     (response) {
     return `
@@ -92,11 +91,11 @@ const generateREADME = function
         `
 }
 
+//Readme file creation
 async function init() {
     try {
         const response = await prompts();
         const readmePageContent = generateREADME(response);
-        // response.title, response.location, response.description, response.installation, response.usage, response.contribution, response.tests, response.license, response.github, response.email
         fs.writeFile('README.md', readmePageContent, (err) => {
             err ? console.error(err) : console.log("Created README.md")
         })
