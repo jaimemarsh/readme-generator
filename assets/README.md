@@ -1,5 +1,5 @@
-
-        #README SAMPLE
+//EXAMPLE README
+        #SQL Challenge 12: Employee Tracker
         ##Table of Contents
         [Installation](#installation)
         [Usage](#usage)
@@ -9,19 +9,19 @@
         [Questions](#questions)
 
         ##Discription
-        This is an example created from the README Generator
+        Using SQL I created a database to track and manage an employee database. 
 
         ##Installation
-        
+        In order to use this application install inquirer using "npm i inquirer@8.2.4"
 
         ##Usage
         
 
         ##Contribution
-        
+        No contribution guidelines
 
         ##Tests
-        
+        No tests preform
 
         ##License
         MIT
