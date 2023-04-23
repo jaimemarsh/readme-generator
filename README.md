@@ -30,7 +30,7 @@
         https://drive.google.com/file/d/1xaZ6nWkjE44rn7yMoCZ4GDXzG2ZvMzX7/view?usp=sharing
 
         Image
-       <img src=./assets/screenshot.png>
+       <img src="./assets/screenshot.png">
 
         ##Questions
         If you have any questions about the repo, open an issue or contact me directly at jaimemarsh19@gmail.com.
