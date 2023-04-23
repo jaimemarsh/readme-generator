@@ -1,4 +1,4 @@
-README-GENERATOR
+<h2>README-GENERATOR</h2>
 
  This project allows the user to easily generate a professional README file by using a command-line application to generate one. This allows the project creator to devote more time working on the project.
 
