@@ -57,7 +57,7 @@ function prompts() {
 const generateREADME = function
     (response) {
     return `
-        # ${response.title}
+        #${response.title}
         ##Table of Contents
         [Installation](#installation)
         [Usage](#usage)
